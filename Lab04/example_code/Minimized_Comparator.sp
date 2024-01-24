@@ -1,0 +1,458 @@
+.TITLE Comparator
+*****************************
+**     Library setting     **
+*****************************
+.protect
+.include '7nm_TT.pm'
+.include 'asap7sc7p5t_INVBUF_RVT.sp'
+.include 'asap7sc7p5t_SIMPLE_RVT.sp'
+.include 'Buffer.sp'
+.unprotect
+
+.vec 'Pattern_comparator.vec'
+*****************************
+**     Voltage Source      **
+*****************************
+.param VDD_c = 0.7
+.global VDD GND
+VDD VDD GND VDD_c
+
+Xcomparator GND VDD a63_ a62_ a61_ a60_ a59_ a58_ a57_ a56_ a55_ a54_ a53_ a52_ a51_ a50_ a49_ a48_ a47_ a46_ a45_ a44_ a43_ a42_ a41_ a40_ a39_ a38_ a37_ a36_ a35_ a34_ a33_ a32_ a31_ a30_ a29_ a28_ a27_ a26_ a25_ a24_ a23_ a22_ a21_ a20_ a19_ a18_ a17_ a16_ a15_ a14_ a13_ a12_ a11_ a10_ a9_ a8_ a7_ a6_ a5_ a4_ a3_ a2_ a1_ a0_ 
++                   b63_ b62_ b61_ b60_ b59_ b58_ b57_ b56_ b55_ b54_ b53_ b52_ b51_ b50_ b49_ b48_ b47_ b46_ b45_ b44_ b43_ b42_ b41_ b40_ b39_ b38_ b37_ b36_ b35_ b34_ b33_ b32_ b31_ b30_ b29_ b28_ b27_ b26_ b25_ b24_ b23_ b22_ b21_ b20_ b19_ b18_ b17_ b16_ b15_ b14_ b13_ b12_ b11_ b10_ b9_ b8_ b7_ b6_ b5_ b4_ b3_ b2_ b1_ b0_ 
++                   out Comparator
+xbufout GND VDD out out_ BUFx24_ASAP7_75t_R
+xbufa0 a0 a0_ buffer
+xbufa1 a1 a1_ buffer
+xbufa2 a2 a2_ buffer
+xbufa3 a3 a3_ buffer
+xbufa4 a4 a4_ buffer
+xbufa5 a5 a5_ buffer
+xbufa6 a6 a6_ buffer
+xbufa7 a7 a7_ buffer
+xbufa8 a8 a8_ buffer
+xbufa9 a9 a9_ buffer
+xbufa10 a10 a10_ buffer
+xbufa11 a11 a11_ buffer
+xbufa12 a12 a12_ buffer
+xbufa13 a13 a13_ buffer
+xbufa14 a14 a14_ buffer
+xbufa15 a15 a15_ buffer
+xbufa16 a16 a16_ buffer
+xbufa17 a17 a17_ buffer
+xbufa18 a18 a18_ buffer
+xbufa19 a19 a19_ buffer
+xbufa20 a20 a20_ buffer
+xbufa21 a21 a21_ buffer
+xbufa22 a22 a22_ buffer
+xbufa23 a23 a23_ buffer
+xbufa24 a24 a24_ buffer
+xbufa25 a25 a25_ buffer
+xbufa26 a26 a26_ buffer
+xbufa27 a27 a27_ buffer
+xbufa28 a28 a28_ buffer
+xbufa29 a29 a29_ buffer
+xbufa30 a30 a30_ buffer
+xbufa31 a31 a31_ buffer
+xbufa32 a32 a32_ buffer
+xbufa33 a33 a33_ buffer
+xbufa34 a34 a34_ buffer
+xbufa35 a35 a35_ buffer
+xbufa36 a36 a36_ buffer
+xbufa37 a37 a37_ buffer
+xbufa38 a38 a38_ buffer
+xbufa39 a39 a39_ buffer
+xbufa40 a40 a40_ buffer
+xbufa41 a41 a41_ buffer
+xbufa42 a42 a42_ buffer
+xbufa43 a43 a43_ buffer
+xbufa44 a44 a44_ buffer
+xbufa45 a45 a45_ buffer
+xbufa46 a46 a46_ buffer
+xbufa47 a47 a47_ buffer
+xbufa48 a48 a48_ buffer
+xbufa49 a49 a49_ buffer
+xbufa50 a50 a50_ buffer
+xbufa51 a51 a51_ buffer
+xbufa52 a52 a52_ buffer
+xbufa53 a53 a53_ buffer
+xbufa54 a54 a54_ buffer
+xbufa55 a55 a55_ buffer
+xbufa56 a56 a56_ buffer
+xbufa57 a57 a57_ buffer
+xbufa58 a58 a58_ buffer
+xbufa59 a59 a59_ buffer
+xbufa60 a60 a60_ buffer
+xbufa61 a61 a61_ buffer
+xbufa62 a62 a62_ buffer
+xbufa63 a63 a63_ buffer
+
+xbufb0 b0 b0_ buffer
+xbufb1 b1 b1_ buffer
+xbufb2 b2 b2_ buffer
+xbufb3 b3 b3_ buffer
+xbufb4 b4 b4_ buffer
+xbufb5 b5 b5_ buffer
+xbufb6 b6 b6_ buffer
+xbufb7 b7 b7_ buffer
+xbufb8 b8 b8_ buffer
+xbufb9 b9 b9_ buffer
+xbufb10 b10 b10_ buffer
+xbufb11 b11 b11_ buffer
+xbufb12 b12 b12_ buffer
+xbufb13 b13 b13_ buffer
+xbufb14 b14 b14_ buffer
+xbufb15 b15 b15_ buffer
+xbufb16 b16 b16_ buffer
+xbufb17 b17 b17_ buffer
+xbufb18 b18 b18_ buffer
+xbufb19 b19 b19_ buffer
+xbufb20 b20 b20_ buffer
+xbufb21 b21 b21_ buffer
+xbufb22 b22 b22_ buffer
+xbufb23 b23 b23_ buffer
+xbufb24 b24 b24_ buffer
+xbufb25 b25 b25_ buffer
+xbufb26 b26 b26_ buffer
+xbufb27 b27 b27_ buffer
+xbufb28 b28 b28_ buffer
+xbufb29 b29 b29_ buffer
+xbufb30 b30 b30_ buffer
+xbufb31 b31 b31_ buffer
+xbufb32 b32 b32_ buffer
+xbufb33 b33 b33_ buffer
+xbufb34 b34 b34_ buffer
+xbufb35 b35 b35_ buffer
+xbufb36 b36 b36_ buffer
+xbufb37 b37 b37_ buffer
+xbufb38 b38 b38_ buffer
+xbufb39 b39 b39_ buffer
+xbufb40 b40 b40_ buffer
+xbufb41 b41 b41_ buffer
+xbufb42 b42 b42_ buffer
+xbufb43 b43 b43_ buffer
+xbufb44 b44 b44_ buffer
+xbufb45 b45 b45_ buffer
+xbufb46 b46 b46_ buffer
+xbufb47 b47 b47_ buffer
+xbufb48 b48 b48_ buffer
+xbufb49 b49 b49_ buffer
+xbufb50 b50 b50_ buffer
+xbufb51 b51 b51_ buffer
+xbufb52 b52 b52_ buffer
+xbufb53 b53 b53_ buffer
+xbufb54 b54 b54_ buffer
+xbufb55 b55 b55_ buffer
+xbufb56 b56 b56_ buffer
+xbufb57 b57 b57_ buffer
+xbufb58 b58 b58_ buffer
+xbufb59 b59 b59_ buffer
+xbufb60 b60 b60_ buffer
+xbufb61 b61 b61_ buffer
+xbufb62 b62 b62_ buffer
+xbufb63 b63 b63_ buffer
+Cout1 out GND 3f
+Cout2 out_ GND 5f
+.SUBCKT Comparator VSS VDD  A[63] A[62] A[61] A[60] A[59] A[58] A[57] A[56] A[55] A[54] A[53] A[52] A[51] A[50] A[49] A[48] A[47] A[46] A[45] A[44] A[43] A[42] A[41] A[40] A[39] A[38] A[37] A[36] A[35] A[34] A[33] A[32] A[31] A[30] A[29] A[28] A[27] A[26] A[25] A[24] A[23] A[22] A[21] A[20] A[19] A[18] A[17] A[16] A[15] A[14] A[13] A[12] A[11] A[10] A[9] A[8] A[7] A[6] A[5] A[4] A[3] A[2] A[1] A[0] B[63] B[62] B[61] B[60] B[59] B[58] B[57] B[56] B[55] B[54] B[53] B[52] B[51] B[50] B[49] B[48] B[47] B[46] B[45] B[44] B[43] B[42] B[41] B[40] B[39] B[38] B[37] B[36] B[35] B[34] B[33] B[32] B[31] B[30] B[29] B[28] B[27] B[26] B[25] B[24] B[23] B[22] B[21] B[20] B[19] B[18] B[17] B[16] B[15] B[14] B[13] B[12] B[11] B[10] B[9] B[8] B[7] B[6] B[5] B[4] B[3] B[2] B[1] B[0] Out
+XU12 VSS VDD  B[4] A[4] n14 XOR2x2_ASAP7_75t_R
+XU13 VSS VDD  B[5] A[5] n13 XOR2x2_ASAP7_75t_R
+XU14 VSS VDD  B[6] A[6] n12 XOR2x2_ASAP7_75t_R
+XU30 VSS VDD  B[20] A[20] n32 XOR2x2_ASAP7_75t_R
+XU31 VSS VDD  B[21] A[21] n31 XOR2x2_ASAP7_75t_R
+XU32 VSS VDD  B[22] A[22] n30 XOR2x2_ASAP7_75t_R
+XU33 VSS VDD  B[23] A[23] n29 XOR2x2_ASAP7_75t_R
+XU39 VSS VDD  B[36] A[36] n41 XOR2x2_ASAP7_75t_R
+XU40 VSS VDD  B[37] A[37] n40 XOR2x2_ASAP7_75t_R
+XU41 VSS VDD  B[38] A[38] n39 XOR2x2_ASAP7_75t_R
+XU42 VSS VDD  B[39] A[39] n38 XOR2x2_ASAP7_75t_R
+XU87 VSS VDD  B[7] A[7] n11 XOR2x2_ASAP7_75t_R
+****************************************************************
+*XU83 VSS VDD  n41 n40 n39 n38 n149 NOR4xp25_ASAP7_75t_R
+*XU84 VSS VDD  n32 n31 n30 n29 n148 NOR4xp25_ASAP7_75t_R
+*XU85 VSS VDD  n105 n104 n103 n102 n153 NAND4xp25_ASAP7_75t_R
+*XU86 VSS VDD  n14 n13 n12 n11 n146 NOR4xp25_ASAP7_75t_R
+*XU88 VSS VDD  n101 n100 n99 n98 n102 NOR4xp25_ASAP7_75t_R
+*XU89 VSS VDD  n137 n136 n135 n134 n143 NOR4xp25_ASAP7_75t_R
+*XU90 VSS VDD  n97 n96 n95 n94 n103 NOR4xp25_ASAP7_75t_R
+*XU91 VSS VDD  n133 n132 n131 n130 n144 NOR4xp25_ASAP7_75t_R
+*XU92 VSS VDD  n93 n92 n91 n90 n104 NOR4xp25_ASAP7_75t_R
+*XU93 VSS VDD  n129 n128 n127 n126 n145 NOR4xp25_ASAP7_75t_R
+*XU94 VSS VDD  n117 n116 n115 n114 n123 NOR4xp25_ASAP7_75t_R
+*XU95 VSS VDD  n113 n112 n111 n110 n124 NOR4xp25_ASAP7_75t_R
+*XU96 VSS VDD  n109 n108 n107 n106 n125 NOR4xp25_ASAP7_75t_R
+*XU97 VSS VDD  n89 n88 n87 n86 n105 NOR4xp25_ASAP7_75t_R
+*XU98 VSS VDD  n125 n124 n123 n122 n152 NAND4xp25_ASAP7_75t_R
+*XU99 VSS VDD  n121 n120 n119 n118 n122 NOR4xp25_ASAP7_75t_R
+*XU100 VSS VDD  n145 n144 n143 n142 n151 NAND4xp25_ASAP7_75t_R
+*XU101 VSS VDD  n141 n140 n139 n138 n142 NOR4xp25_ASAP7_75t_R
+*XU102 VSS VDD  n153 n152 n151 n150 Out NOR4xp25_ASAP7_75t_R
+*XU103 VSS VDD  n149 n148 n147 n146 n150 NAND4xp25_ASAP7_75t_R
+*XU104 VSS VDD  n82 n83 n84 n85 n147 AND4x1_ASAP7_75t_R
+****************************************************************
+XU83_0 VSS VDD n41 n40 U83_0 NOR2x2_ASAP7_75t_R
+XU83_1 VSS VDD n41 n40 U83_1 NOR2x2_ASAP7_75t_R
+XU83_2 VSS VDD U83_0 U83_1 n149 AND2x2_ASAP7_75t_R
+CU83_0 U83_0 GND 3f
+CU83_1 U83_1 GND 3f
+XU84_0 VSS VDD n32 n31 U84_0 NOR2x2_ASAP7_75t_R
+XU84_1 VSS VDD n32 n31 U84_1 NOR2x2_ASAP7_75t_R
+XU84_2 VSS VDD U84_0 U84_1 n148 AND2x2_ASAP7_75t_R
+CU84_0 U84_0 GND 3f
+CU84_1 U84_1 GND 3f
+XU85_0 VSS VDD n105 n104 U85_0 NAND2x2_ASAP7_75t_R
+XU85_1 VSS VDD n105 n104 U85_1 NAND2x2_ASAP7_75t_R
+XU85_2 VSS VDD U85_0 U85_1 n153 OR2x2_ASAP7_75t_R
+CU85_0 U85_0 GND 3f
+CU85_1 U85_1 GND 3f
+XU86_0 VSS VDD n14 n13 U86_0 NOR2x2_ASAP7_75t_R
+XU86_1 VSS VDD n14 n13 U86_1 NOR2x2_ASAP7_75t_R
+XU86_2 VSS VDD U86_0 U86_1 n146 AND2x2_ASAP7_75t_R
+CU86_0 U86_0 GND 3f
+CU86_1 U86_1 GND 3f
+XU88_0 VSS VDD n101 n100 U88_0 NOR2x2_ASAP7_75t_R
+XU88_1 VSS VDD n101 n100 U88_1 NOR2x2_ASAP7_75t_R
+XU88_2 VSS VDD U88_0 U88_1 n102 AND2x2_ASAP7_75t_R
+CU88_0 U88_0 GND 3f
+CU88_1 U88_1 GND 3f
+XU89_0 VSS VDD n137 n136 U89_0 NOR2x2_ASAP7_75t_R
+XU89_1 VSS VDD n137 n136 U89_1 NOR2x2_ASAP7_75t_R
+XU89_2 VSS VDD U89_0 U89_1 n143 AND2x2_ASAP7_75t_R
+CU89_0 U89_0 GND 3f
+CU89_1 U89_1 GND 3f
+XU90_0 VSS VDD n97 n96 U90_0 NOR2x2_ASAP7_75t_R
+XU90_1 VSS VDD n97 n96 U90_1 NOR2x2_ASAP7_75t_R
+XU90_2 VSS VDD U90_0 U90_1 n103 AND2x2_ASAP7_75t_R
+CU90_0 U90_0 GND 3f
+CU90_1 U90_1 GND 3f
+XU91_0 VSS VDD n133 n132 U91_0 NOR2x2_ASAP7_75t_R
+XU91_1 VSS VDD n133 n132 U91_1 NOR2x2_ASAP7_75t_R
+XU91_2 VSS VDD U91_0 U91_1 n144 AND2x2_ASAP7_75t_R
+CU91_0 U91_0 GND 3f
+CU91_1 U91_1 GND 3f
+XU92_0 VSS VDD n93 n92 U92_0 NOR2x2_ASAP7_75t_R
+XU92_1 VSS VDD n93 n92 U92_1 NOR2x2_ASAP7_75t_R
+XU92_2 VSS VDD U92_0 U92_1 n104 AND2x2_ASAP7_75t_R
+CU92_0 U92_0 GND 3f
+CU92_1 U92_1 GND 3f
+XU93_0 VSS VDD n129 n128 U93_0 NOR2x2_ASAP7_75t_R
+XU93_1 VSS VDD n129 n128 U93_1 NOR2x2_ASAP7_75t_R
+XU93_2 VSS VDD U93_0 U93_1 n145 AND2x2_ASAP7_75t_R
+CU93_0 U93_0 GND 3f
+CU93_1 U93_1 GND 3f
+XU94_0 VSS VDD n117 n116 U94_0 NOR2x2_ASAP7_75t_R
+XU94_1 VSS VDD n117 n116 U94_1 NOR2x2_ASAP7_75t_R
+XU94_2 VSS VDD U94_0 U94_1 n123 AND2x2_ASAP7_75t_R
+CU94_0 U94_0 GND 3f
+CU94_1 U94_1 GND 3f
+XU95_0 VSS VDD n113 n112 U95_0 NOR2x2_ASAP7_75t_R
+XU95_1 VSS VDD n113 n112 U95_1 NOR2x2_ASAP7_75t_R
+XU95_2 VSS VDD U95_0 U95_1 n124 AND2x2_ASAP7_75t_R
+CU95_0 U95_0 GND 3f
+CU95_1 U95_1 GND 3f
+XU96_0 VSS VDD n109 n108 U96_0 NOR2x2_ASAP7_75t_R
+XU96_1 VSS VDD n109 n108 U96_1 NOR2x2_ASAP7_75t_R
+XU96_2 VSS VDD U96_0 U96_1 n125 AND2x2_ASAP7_75t_R
+CU96_0 U96_0 GND 3f
+CU96_1 U96_1 GND 3f
+XU97_0 VSS VDD n89 n88 U97_0 NOR2x2_ASAP7_75t_R
+XU97_1 VSS VDD n89 n88 U97_1 NOR2x2_ASAP7_75t_R
+XU97_2 VSS VDD U97_0 U97_1 n105 AND2x2_ASAP7_75t_R
+CU97_0 U97_0 GND 3f
+CU97_1 U97_1 GND 3f
+XU98_0 VSS VDD n125 n124 U98_0 NAND2x2_ASAP7_75t_R
+XU98_1 VSS VDD n125 n124 U98_1 NAND2x2_ASAP7_75t_R
+XU98_2 VSS VDD U98_0 U98_1 n152 OR2x2_ASAP7_75t_R
+CU98_0 U98_0 GND 3f
+CU98_1 U98_1 GND 3f
+XU99_0 VSS VDD n121 n120 U99_0 NOR2x2_ASAP7_75t_R
+XU99_1 VSS VDD n121 n120 U99_1 NOR2x2_ASAP7_75t_R
+XU99_2 VSS VDD U99_0 U99_1 n122 AND2x2_ASAP7_75t_R
+CU99_0 U99_0 GND 3f
+CU99_1 U99_1 GND 3f
+XU100_0 VSS VDD n145 n144 U100_0 NAND2x2_ASAP7_75t_R
+XU100_1 VSS VDD n145 n144 U100_1 NAND2x2_ASAP7_75t_R
+XU100_2 VSS VDD U100_0 U100_1 n151 OR2x2_ASAP7_75t_R
+CU100_0 U100_0 GND 3f
+CU100_1 U100_1 GND 3f
+XU101_0 VSS VDD n141 n140 U101_0 NOR2x2_ASAP7_75t_R
+XU101_1 VSS VDD n141 n140 U101_1 NOR2x2_ASAP7_75t_R
+XU101_2 VSS VDD U101_0 U101_1 n142 AND2x2_ASAP7_75t_R
+CU101_0 U101_0 GND 3f
+CU101_1 U101_1 GND 3f
+XU102_0 VSS VDD n153 n152 U102_0 NOR2x2_ASAP7_75t_R
+XU102_1 VSS VDD n153 n152 U102_1 NOR2x2_ASAP7_75t_R
+XU102_2 VSS VDD U102_0 U102_1 Out AND2x2_ASAP7_75t_R
+CU102_0 U102_0 GND 3f
+CU102_1 U102_1 GND 3f
+XU103_0 VSS VDD n149 n148 U103_0 NAND2x2_ASAP7_75t_R
+XU103_1 VSS VDD n149 n148 U103_1 NAND2x2_ASAP7_75t_R
+XU103_2 VSS VDD U103_0 U103_1 n150 OR2x2_ASAP7_75t_R
+CU103_0 U103_0 GND 3f
+CU103_1 U103_1 GND 3f
+XU104_0 VSS VDD n82 n83 U104_0 NOR2x2_ASAP7_75t_R
+XU104_1 VSS VDD n82 n83 U104_1 NOR2x2_ASAP7_75t_R
+XU104_2 VSS VDD U104_0 U104_1 n147 NOR2x2_ASAP7_75t_R
+CU104_0 U104_0 GND 3f
+CU104_1 U104_1 GND 3f
+****************************************************************
+XU105 VSS VDD  B[14] A[14] n82 XNOR2x2_ASAP7_75t_R
+XU106 VSS VDD  B[15] A[15] n83 XNOR2x2_ASAP7_75t_R
+XU107 VSS VDD  B[8] A[8] n84   XNOR2x2_ASAP7_75t_R
+XU108 VSS VDD  B[9] A[9] n85   XNOR2x2_ASAP7_75t_R
+XU109 VSS VDD  B[41] A[41] n89 XOR2x2_ASAP7_75t_R
+XU110 VSS VDD  B[40] A[40] n88 XOR2x2_ASAP7_75t_R
+XU111 VSS VDD  B[43] A[43] n87 XOR2x2_ASAP7_75t_R
+XU112 VSS VDD  B[42] A[42] n86 XOR2x2_ASAP7_75t_R
+XU113 VSS VDD  B[49] A[49] n93 XOR2x2_ASAP7_75t_R
+XU114 VSS VDD  B[48] A[48] n92 XOR2x2_ASAP7_75t_R
+XU115 VSS VDD  B[51] A[51] n91 XOR2x2_ASAP7_75t_R
+XU116 VSS VDD  B[50] A[50] n90 XOR2x2_ASAP7_75t_R
+XU117 VSS VDD  B[57] A[57] n97 XOR2x2_ASAP7_75t_R
+XU118 VSS VDD  B[56] A[56] n96 XOR2x2_ASAP7_75t_R
+XU119 VSS VDD  B[59] A[59] n95 XOR2x2_ASAP7_75t_R
+XU120 VSS VDD  B[58] A[58] n94 XOR2x2_ASAP7_75t_R
+XU121 VSS VDD  B[25] A[25] n101 XOR2x2_ASAP7_75t_R
+XU122 VSS VDD  B[24] A[24] n100 XOR2x2_ASAP7_75t_R
+XU123 VSS VDD  B[27] A[27] n99 XOR2x2_ASAP7_75t_R
+XU124 VSS VDD  B[26] A[26] n98 XOR2x2_ASAP7_75t_R
+XU125 VSS VDD  B[34] A[34] n109 XOR2x2_ASAP7_75t_R
+XU126 VSS VDD  B[35] A[35] n108 XOR2x2_ASAP7_75t_R
+XU127 VSS VDD  B[32] A[32] n107 XOR2x2_ASAP7_75t_R
+XU128 VSS VDD  B[33] A[33] n106 XOR2x2_ASAP7_75t_R
+XU129 VSS VDD  B[18] A[18] n113 XOR2x2_ASAP7_75t_R
+XU130 VSS VDD  B[19] A[19] n112 XOR2x2_ASAP7_75t_R
+XU131 VSS VDD  B[16] A[16] n111 XOR2x2_ASAP7_75t_R
+XU132 VSS VDD  B[17] A[17] n110 XOR2x2_ASAP7_75t_R
+XU133 VSS VDD  B[12] A[12] n117 XOR2x2_ASAP7_75t_R
+XU134 VSS VDD  B[13] A[13] n116 XOR2x2_ASAP7_75t_R
+XU135 VSS VDD  B[10] A[10] n115 XOR2x2_ASAP7_75t_R
+XU136 VSS VDD  B[11] A[11] n114 XOR2x2_ASAP7_75t_R
+XU137 VSS VDD  B[2] A[2] n121 XOR2x2_ASAP7_75t_R
+XU138 VSS VDD  B[3] A[3] n120 XOR2x2_ASAP7_75t_R
+XU139 VSS VDD  B[0] A[0] n119 XOR2x2_ASAP7_75t_R
+XU140 VSS VDD  B[1] A[1] n118 XOR2x2_ASAP7_75t_R
+XU141 VSS VDD  B[46] A[46] n129 XOR2x2_ASAP7_75t_R
+XU142 VSS VDD  B[47] A[47] n128 XOR2x2_ASAP7_75t_R
+XU143 VSS VDD  B[44] A[44] n127 XOR2x2_ASAP7_75t_R
+XU144 VSS VDD  B[45] A[45] n126 XOR2x2_ASAP7_75t_R
+XU145 VSS VDD  B[54] A[54] n133 XOR2x2_ASAP7_75t_R
+XU146 VSS VDD  B[55] A[55] n132 XOR2x2_ASAP7_75t_R
+XU147 VSS VDD  B[52] A[52] n131 XOR2x2_ASAP7_75t_R
+XU148 VSS VDD  B[53] A[53] n130 XOR2x2_ASAP7_75t_R
+XU149 VSS VDD  B[62] A[62] n137 XOR2x2_ASAP7_75t_R
+XU150 VSS VDD  B[63] A[63] n136 XOR2x2_ASAP7_75t_R
+XU151 VSS VDD  B[60] A[60] n135 XOR2x2_ASAP7_75t_R
+XU152 VSS VDD  B[61] A[61] n134 XOR2x2_ASAP7_75t_R
+XU153 VSS VDD  B[30] A[30] n141 XOR2x2_ASAP7_75t_R
+XU154 VSS VDD  B[31] A[31] n140 XOR2x2_ASAP7_75t_R
+XU155 VSS VDD  B[28] A[28] n139 XOR2x2_ASAP7_75t_R
+XU156 VSS VDD  B[29] A[29] n138 XOR2x2_ASAP7_75t_R
+
+c11 n11 VSS 3f
+c12 n12 VSS 3f
+c13 n13 VSS 3f
+c14 n14 VSS 3f
+c29 n29 VSS 3f
+c30 n30 VSS 3f
+c31 n31 VSS 3f
+c32 n32 VSS 3f
+c38 n38 VSS 3f
+c39 n39 VSS 3f
+c40 n40 VSS 3f
+c41 n41 VSS 3f
+c82 n82 VSS 3f
+c83 n83 VSS 3f
+c84 n84 VSS 3f
+c85 n85 VSS 3f
+c86 n86 VSS 3f
+c87 n87 VSS 3f
+c88 n88 VSS 3f
+c89 n89 VSS 3f
+c90 n90 VSS 3f
+c91 n91 VSS 3f
+c92 n92 VSS 3f
+c93 n93 VSS 3f
+c94 n94 VSS 3f
+c95 n95 VSS 3f
+c96 n96 VSS 3f
+c97 n97 VSS 3f
+c98 n98 VSS 3f
+c99 n99 VSS 3f
+c100 n100 VSS 3f
+c101 n101 VSS 3f
+c102 n102 VSS 3f
+c103 n103 VSS 3f
+c104 n104 VSS 3f
+c105 n105 VSS 3f
+c106 n106 VSS 3f
+c107 n107 VSS 3f
+c108 n108 VSS 3f
+c109 n109 VSS 3f
+c110 n110 VSS 3f
+c111 n111 VSS 3f
+c112 n112 VSS 3f
+c113 n113 VSS 3f
+c114 n114 VSS 3f
+c115 n115 VSS 3f
+c116 n116 VSS 3f
+c117 n117 VSS 3f
+c118 n118 VSS 3f
+c119 n119 VSS 3f
+c120 n120 VSS 3f
+c121 n121 VSS 3f
+c122 n122 VSS 3f
+c123 n123 VSS 3f
+c124 n124 VSS 3f
+c125 n125 VSS 3f
+c126 n126 VSS 3f
+c127 n127 VSS 3f
+c128 n128 VSS 3f
+c129 n129 VSS 3f
+c130 n130 VSS 3f
+c131 n131 VSS 3f
+c132 n132 VSS 3f
+c133 n133 VSS 3f
+c134 n134 VSS 3f
+c135 n135 VSS 3f
+c136 n136 VSS 3f
+c137 n137 VSS 3f
+c138 n138 VSS 3f
+c139 n139 VSS 3f
+c140 n140 VSS 3f
+c141 n141 VSS 3f
+c142 n142 VSS 3f
+c143 n143 VSS 3f
+c144 n144 VSS 3f
+c145 n145 VSS 3f
+c146 n146 VSS 3f
+c147 n147 VSS 3f
+c148 n148 VSS 3f
+c149 n149 VSS 3f
+c150 n150 VSS 3f
+c151 n151 VSS 3f
+c152 n152 VSS 3f
+c153 n153 VSS 3f
+.ENDS
+
+
+*****************************
+**      Measurement        **
+*****************************
+.tran 0.01ns 65ns 0.01ns
+.measure TRAN delay  TRIG V(a0_) VAL='VDD_c/2' RISE=1 TARG V(out_) VAL='VDD_c/2' RISE=1
+.measure TRAN TR     TRIG V(out_) VAL='VDD_c*0.1' RISE=1 TARG V(out_) VAL='VDD_c*0.9' RISE=1
+.measure TRAN TF     TRIG V(out_) VAL='VDD_c*0.9' FALL=1 TARG V(out_) VAL='VDD_c*0.1' FALL=1
+.meas tran pwr avg POWER 
+
+*** 
+*****************************
+**    Simulator setting    **
+*****************************
+.option post 
+.options probe	
+.probe v(*) 
+.option captab	
+.TEMP 25
+
+.op
+
+.end
